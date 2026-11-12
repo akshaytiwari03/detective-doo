@@ -1,0 +1,33 @@
+{
+  "name": "case-archive-murder-mysteries",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A static, fully playable library of ten original murder mystery investigations. Vite + React + TypeScript, deployable to GitHub Pages.",
+  "scripts": {
+    "dev": "vite",
+    "validate": "tsx scripts/validate-cases.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run validate && npm run typecheck && vite build",
+    "build:single": "npm run validate && SINGLEFILE=1 vite build --outDir dist-single",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3",
+    "vite": "5.4.11",
+    "vite-plugin-singlefile": "2.0.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
